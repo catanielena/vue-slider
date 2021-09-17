@@ -11,6 +11,9 @@ const app = new Vue ({
         prevImg: function() {
             return this.imageIndex <= 0 ? this.imageIndex=this.images.length - 1 : this.imageIndex--;
         },
+        displayImage: function(i) {
+            this.imageIndex = i;
+        }
 
     }
 });

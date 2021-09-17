@@ -22,6 +22,9 @@
             <!-- slider-img -->           
             <div class="slider__img">
                 <img :src="images[imageIndex]" alt="ortho-img">
+                <div class="img__bullets">
+                    <div class="bullet" v-for="(image, i) in images" :class="i==imageIndex ? 'active' : ''" @click="displayImage(i)"></div>
+                </div>
             </div>
             <!-- /slider-img -->
             <!-- slider-arrow -->
