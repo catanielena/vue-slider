@@ -14,6 +14,7 @@ const app = new Vue ({
         },
         displayImage: function(i) {
             this.imageIndex = i;
+            clearInterval(this.autoSlider);
         },
         nextImgClick: function() {
             clearInterval(this.autoSlider);

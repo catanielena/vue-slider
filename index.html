@@ -14,24 +14,34 @@
         <div class="slider" id="root">
             <!-- slider-arrow -->
             <div class="slider__arrow">
-                <button @click="prevImgClick()">
-                    prev
+                <button class= "btn" @click="prevImgClick()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 123.94">
+                        <path
+                            d="M62,123.94a19.9,19.9,0,0,1-14.14-5.86l-42-42a20,20,0,0,1,0-28.28l42-42a20,20,0,0,1,28-.25l3.92,3.78A20,20,0,0,1,80,38l-1.33,1.32H120a20,20,0,0,1,20,20v5.4a20,20,0,0,1-20,20H78.67L80,86a20,20,0,0,1-.22,28.56l-3.92,3.78A19.93,19.93,0,0,1,62,123.94Z" />
+                        <polygon
+                            points="61.97 20 20 61.97 61.97 103.94 65.88 100.16 30.26 64.67 120 64.67 120 59.27 30.26 59.27 65.88 23.78 61.97 20" />
+                    </svg>
                 </button>
             </div>
             <!-- /slider-arrow -->
             <!-- slider-img -->           
             <div class="slider__img">
                 <img :src="images[imageIndex]" alt="ortho-img">
-                <div class="img__bullets">
-                    <div class="bullet" v-for="(image, i) in images" :class="i==imageIndex ? 'active' : ''" @click="displayImage(i)"></div>
-                </div>
             </div>
             <!-- /slider-img -->
             <!-- slider-arrow -->
             <div class="slider__arrow">
-                <button @click="nextImgClick()">
-                    next
+                <button class= "btn" @click="nextImgClick()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 123.98">
+                        <path
+                            d="M78,0A19.89,19.89,0,0,1,92.14,5.86l42,42a20,20,0,0,1,0,28.28l-42,42a20,20,0,0,1-28,.25l-3.92-3.78a20,20,0,0,1-.61-28.28l.39-.39,1.33-1.32H20a20,20,0,0,1-20-20v-5.4a20,20,0,0,1,20-20H61.33L60,37.94a20,20,0,0,1-.06-28.28l.28-.28L64.14,5.6A20,20,0,0,1,78,0Z" />
+                        <polygon
+                            points="78.03 103.94 120 61.97 78.03 20 74.12 23.78 109.74 59.27 20 59.27 20 64.67 109.74 64.67 74.12 100.16 78.03 103.94" />
+                    </svg>
                 </button>
+            </div>
+            <div class="img__bullets">
+                <div class="bullet" v-for="(image, i) in images" :class="i==imageIndex ? 'active' : ''" @click="displayImage(i)"></div>
             </div>
             <!-- /slider-arrow -->
         </div>
